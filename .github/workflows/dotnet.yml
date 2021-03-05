@@ -18,6 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
+      working-directory: ./Hello
       run: dotnet restore
     - name: Build
+      working-directory: ./Hello
       run: dotnet build --no-restore
